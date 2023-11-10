@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Practice</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        canvas {
+            margin-left: 35%;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML canvas Gradients</h1>
+
+
+    <canvas id="myCanvas" width="200" height="100" style="border: 1px solid black"></canvas>
+
+    <script>
+        const c = document.getElementById("myCanvas");
+        const ctx = c.getContext("2d");
+
+        const grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        grd.addColorStop(0, "blue");
+        grd.addColorStop(1, "white");
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+    </script>
+</body>
+
+</html>

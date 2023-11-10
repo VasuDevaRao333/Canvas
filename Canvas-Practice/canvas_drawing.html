@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Practice</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        canvas {
+            margin-left: 35%;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML canvas Drawing </h1>
+
+    <canvas id="myCanvas" width="200" height="100" style="border: 1px solid black"></canvas>
+
+    <script>
+        // Find the canvas <canvas> element
+        const canvas = document.getElementById("myCanvas");
+
+        // Create a drawing Object
+        const ctx = canvas.getContext("2d");
+
+        // Draw on the canvas
+        ctx.fillStyle = "#FFF000";
+
+        // The fillRect(x,y,width,height) method draws a rectangle, filled with the fill style on the canvas
+        ctx.fillRect(0, 0, 150, 75);
+    </script>
+</body>
+
+</html>

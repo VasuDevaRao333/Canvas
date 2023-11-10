@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Practice</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        canvas {
+            margin-left: 35%;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML canvas Shapes </h1>
+
+    <canvas id="myCanvas" width="200" height="100" style="border: 1px solid black"></canvas>
+    <br><br><br><br><br><br>
+    <canvas id="myCanvasTwo" width="200" height="100" style="border: 1px solid black"></canvas>
+    <br><br><br><br><br><br>
+    <canvas id="myCanvasThree" width="200" height="100" style="border: 1px solid black"></canvas>
+    <br><br><br><br><br><br>
+    <canvas id="myCanvasFour" width="300" height="200" style="border: 1px solid black"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        const canvastwo = document.getElementById("myCanvasTwo");
+        const ctxtwo = canvastwo.getContext("2d");
+
+        const canvasthree = document.getElementById("myCanvasThree");
+        const ctxthree = canvasthree.getContext("2d");
+
+        const canvasfour = document.getElementById("myCanvasFour");
+        const ctxfour = canvasfour.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(20, 20);
+        ctx.lineTo(120, 20);
+        ctx.lineTo(170, 80);
+        ctx.lineTo(20, 80);
+        ctx.strokeStyle = "orange";
+        ctx.lineWidth = 5;
+        ctx.lineCap = "round";
+        ctx.lineTo(20, 20);
+        ctx.stroke();
+
+        // Triangle shape
+        ctxtwo.beginPath();
+        ctxtwo.moveTo(100, 20);
+        ctxtwo.lineTo(180, 100);
+        ctxtwo.lineTo(20, 100);
+        ctxtwo.strokeStyle = "red";
+        ctxtwo.lineWidth = 5;
+        ctxtwo.lineCap = "round";
+        ctxtwo.lineTo(100, 20);
+        ctxtwo.stroke();
+
+        // Rectangle shape
+        ctxthree.beginPath();
+        ctxthree.moveTo(20, 20);
+        ctxthree.lineTo(180, 20);
+        ctxthree.lineTo(180, 80);
+        ctxthree.lineTo(20, 80);
+        ctxthree.lineTo(20, 20);
+        ctxthree.strokeStyle = "green";
+        ctxthree.lineWidth = 5;
+        ctxthree.lineCap = "round";
+        ctxthree.stroke();
+
+        ctxfour.beginPath();
+        ctxfour.moveTo(30, 30);
+        ctxfour.lineTo(270, 30);
+        ctxfour.lineTo(270, 170);
+        ctxfour.lineTo(30, 170);
+        ctxfour.lineTo(30, 30);
+        ctxfour.lineTo(150, 170);
+        ctxfour.lineTo(270, 30)
+        ctxfour.lineTo(30, 30)
+        ctxfour.strokeStyle = "purple";
+        ctxfour.lineWidth = 5;
+        ctxfour.lineCap = "round";
+        ctxfour.stroke();
+    </script>
+</body>
+
+</html>
